@@ -15,7 +15,7 @@ Based on [Xamarin.Tip] – Build Your Own CheckBox in Xamarin.Forms article by [
 #### Solution - Version 1
 Using the idea provided by [Alex Dunn] on his article [Xamarin.Tip], I did a few changes in order to resize the Checkbox on Android.
 
-The main steps were:
+Main steps:
 - Add a `BindableProperty` called `SizeRequest` in the custom CheckBox control.
 - Create a method `GetDefaultCheckBoxDrawable` to get the default CheckBox drawable.
 - Change `OnElementChanged` method to clear the text and resize (), set the width/height based on SizeRequest, reset the button drawable and set a new Background drawable with the default checkbox drawable.
