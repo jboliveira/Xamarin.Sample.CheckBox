@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CheckBox.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- COLORS -->
+            <Color x:Key="BackgroundColor">#F4F6FA</Color>
+            <Color x:Key="PrimaryTextColor">#333333</Color>
+            <Color x:Key="PrimaryColor">#00a69c</Color>
+            <Color x:Key="PrimaryDarkColor">#00857D</Color>
+            <Color x:Key="AccentColor">#00857D</Color>
+            <Color x:Key="SecondaryColor">#0072C6</Color>
+            
+            <!-- SIZES -->
+            <OnPlatform x:Key="DefaultSpacing" x:TypeArguments="x:Double">
+                <On Platform="Android, iOS" Value="16" />
+            </OnPlatform>
+            
+            <OnPlatform x:Key="CheckboxSizeNormal" x:TypeArguments="x:Double">
+                <On Platform="Android" Value="28" />
+                <On Platform="iOS" Value="27" />
+            </OnPlatform>
+            
+            <OnPlatform x:Key="CheckboxSize1" x:TypeArguments="x:Double">
+                <On Platform="Android, iOS" Value="60" />
+            </OnPlatform>
+            
+            <OnPlatform x:Key="CheckboxSize2" x:TypeArguments="x:Double">
+                <On Platform="Android, iOS" Value="80" />
+            </OnPlatform>
+            
+            <OnPlatform x:Key="CheckboxSize3" x:TypeArguments="x:Double">
+                <On Platform="Android, iOS" Value="100" />
+            </OnPlatform>
+            
+            <!-- EXPLICIT STYLES -->
+            <Style x:Key="LabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

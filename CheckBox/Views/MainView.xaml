@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ctrls="clr-namespace:CheckBox.Controls;assembly=CheckBox"
+             xmlns:viewModels="clr-namespace:CheckBox.ViewModels;assembly=CheckBox"
+             xmlns:local="clr-namespace:CheckBox" 
+             x:Class="CheckBox.Views.MainView"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="CheckBox">
+    
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout Orientation="Vertical" 
+                 Margin="10,0,10,0"
+                 Spacing="{StaticResource DefaultSpacing}" 
+                 VerticalOptions="CenterAndExpand">
+        
+        <StackLayout Orientation="Horizontal" Spacing="{StaticResource DefaultSpacing}" >
+            <ctrls:CustomCheckbox CheckColor="{DynamicResource SecondaryColor}"
+                                  VerticalOptions="Center"
+                                  SizeRequest="{StaticResource CheckboxSizeNormal}" />
+       
+            <Label Text="CheckBox Normal"
+                   Style="{DynamicResource LabelStyle}"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Spacing="{StaticResource DefaultSpacing}" >
+            <ctrls:CustomCheckbox IsChecked="{Binding UseExistingAddress}"
+                                  CheckColor="{DynamicResource PrimaryColor}"
+                                  VerticalOptions="Center" 
+                                  SizeRequest="{StaticResource CheckboxSize1}" />
+       
+            <Label Text="Use existing address"
+                   Style="{DynamicResource LabelStyle}"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Spacing="{StaticResource DefaultSpacing}" >
+            <ctrls:CustomCheckbox CheckColor="{DynamicResource PrimaryDarkColor}"
+                                  VerticalOptions="Center" 
+                                  SizeRequest="{StaticResource CheckboxSize2}" />
+       
+            <Label Text="CheckBox 02"
+                   Style="{DynamicResource LabelStyle}"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Spacing="{StaticResource DefaultSpacing}" >
+            <ctrls:CustomCheckbox CheckColor="{DynamicResource AccentColor}"
+                                  VerticalOptions="Center" 
+                                  SizeRequest="{StaticResource CheckboxSize3}" />
+       
+            <Label Text="CheckBox 03"
+                   Style="{DynamicResource LabelStyle}"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
